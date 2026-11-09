@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Ddubi (스튜디오 뚜비)</title>
+    <meta name="description" content="단순함을 우선하고, 꼭 필요한 것만 적게, 더 좋게 만드는 독립 소프트웨어 스튜디오">
+    <style>
+        :root {
+            --bg: #F8F5EE;
+            --card-bg: #FFFFFF;
+            --text-main: #2C2621;
+            --text-sub: #6B6257;
+            --text-muted: #968D81;
+            --border: #E8E2D5;
+            --accent: #E05353;
+            --accent-soft: rgba(224, 83, 83, 0.08);
+            --line: #EFEBE3;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo", sans-serif;
+            line-height: 1.7;
+            padding: 60px 20px 100px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 56px;
+        }
+
+        .brand-badge {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+            background: var(--accent-soft);
+            padding: 4px 10px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: 34px;
+            font-weight: 800;
+            letter-spacing: -0.8px;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .lead {
+            font-size: 16px;
+            color: var(--text-sub);
+            word-break: keep-all;
+        }
+
+        .section-title {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 32px;
+            margin-bottom: 32px;
+            box-shadow: 0 4px 24px rgba(44, 38, 33, 0.04);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(44, 38, 33, 0.06);
+        }
+
+        .app-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .app-name {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .app-tag {
+            font-size: 12px;
+            font-weight: 600;
+            background: #F0EDE5;
+            color: var(--text-sub);
+            padding: 3px 8px;
+            border-radius: 6px;
+        }
+
+        .app-desc {
+            font-size: 15px;
+            color: var(--text-sub);
+            margin-bottom: 20px;
+            word-break: keep-all;
+        }
+
+        .app-links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 13.5px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+        }
+
+        .btn-primary {
+            background: var(--text-main);
+            color: #FFFFFF;
+        }
+
+        .btn-primary:hover {
+            background: #000000;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-sub);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: #F5F1EA;
+            color: var(--text-main);
+        }
+
+        footer {
+            border-top: 1px solid var(--line);
+            padding-top: 32px;
+            margin-top: 60px;
+            font-size: 13px;
+            color: var(--text-muted);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        footer a {
+            color: var(--text-sub);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 40px 16px 80px;
+            }
+            .card {
+                padding: 24px;
+                border-radius: 16px;
+            }
+            h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand-badge">Indie Craft Studio</div>
+            <h1>Studio Ddubi</h1>
+            <p class="lead">단순함을 우선하고, 꼭 필요한 것만 적게, 더 좋게 만드는 독립 소프트웨어 스튜디오입니다. 일상에 따뜻한 온기와 손맛을 더하는 디지털 공예품을 빚어냅니다.</p>
+        </header>
+
+        <main>
+            <div class="section-title">Products</div>
+
+            <!-- DduDu (뚜두) -->
+            <article class="card">
+                <div class="app-header">
+                    <h2 class="app-name">뚜두 (DduDu)</h2>
+                    <span class="app-tag">iOS App</span>
+                </div>
+                <p class="app-desc">복잡한 분류나 번거로움 없이, 손글씨와 크레파스 질감으로 일상을 기록하는 감성 다이어리 투두리스트입니다. 종이 속지 위에 스티커를 자유롭게 붙이고, 홈 화면 위젯으로 언제나 함께합니다.</p>
+                <div class="app-links">
+                    <a href="ddudu/privacy/" class="btn btn-secondary">개인정보 처리방침</a>
+                </div>
+            </article>
+        </main>
+
+        <footer>
+            <div>© 2026 Studio Ddubi. All rights reserved.</div>
+            <div>
+                <a href="mailto:emperorvv@gmail.com">Contact Us</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

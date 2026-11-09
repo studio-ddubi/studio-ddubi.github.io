@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인정보 처리방침 | 뚜두 (DduDu)</title>
+    <style>
+        :root {
+            --bg-page: #F5F1EA;
+            --bg-card: #FAF8F5;
+            --text-primary: #38332E;
+            --text-secondary: #7A7268;
+            --text-muted: #9C9488;
+            --border: #E6E0D5;
+            --accent: #E05353;
+            --accent-soft: rgba(224, 83, 83, 0.08);
+            --line: #EFEBE4;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-page);
+            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+            line-height: 1.75;
+            padding: 40px 20px 80px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 48px 40px;
+            box-shadow: 0 4px 20px rgba(60, 50, 40, 0.04);
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            letter-spacing: -0.2px;
+        }
+
+        header {
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 24px;
+            margin-bottom: 32px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.6px;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .app-name {
+            color: var(--accent);
+        }
+
+        .meta {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 4px 12px;
+            font-size: 13px;
+            cursor: pointer;
+            color: var(--text-secondary);
+            transition: all 0.15s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--text-primary);
+            color: #FFF;
+            border-color: var(--text-primary);
+        }
+
+        section {
+            margin-bottom: 32px;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        h2::before {
+            content: "•";
+            color: var(--accent);
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            word-break: keep-all;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 12px;
+        }
+
+        li {
+            font-size: 14.5px;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+            padding-left: 18px;
+            position: relative;
+            word-break: keep-all;
+        }
+
+        li::before {
+            content: "-";
+            position: absolute;
+            left: 4px;
+            color: var(--text-muted);
+        }
+
+        .highlight-box {
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px dashed var(--border);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 16px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            font-size: 14px;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        footer {
+            border-top: 1px solid var(--line);
+            padding-top: 24px;
+            margin-top: 40px;
+            font-size: 13px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        .en-content {
+            display: none;
+        }
+
+        body.show-en .ko-content {
+            display: none;
+        }
+
+        body.show-en .en-content {
+            display: block;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 20px 12px 60px;
+            }
+            .container {
+                padding: 32px 24px;
+                border-radius: 16px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="badge">온디바이스 안심 프라이버시</span>
+            <h1><span class="app-name">뚜두 (DduDu)</span> 개인정보 처리방침</h1>
+            <div class="meta">시행일자: 2026년 11월 1일 | 최종 수정일: 2026년 11월 9일</div>
+            <div class="lang-switch">
+                <button class="lang-btn active" id="btn-ko" onclick="setLang('ko')">한국어</button>
+                <button class="lang-btn" id="btn-en" onclick="setLang('en')">English</button>
+            </div>
+        </header>
+
+        <!-- 한국어 본문 -->
+        <div class="ko-content">
+            <section>
+                <h2>1. 기본 원칙 (100% 온디바이스 저장)</h2>
+                <p>‘뚜두(DduDu)’(이하 ‘앱’)는 사용자의 프라이버시를 최우선으로 생각합니다. 뚜두는 <strong>회원가입, 로그인, 개인정보 입력을 일절 요구하지 않습니다.</strong></p>
+                <div class="highlight-box">
+                    <p>💡 뚜두는 사용자가 작성한 할 일 내용, 날짜, 스티커 배치, 다이어리 설정을 개발자의 서버나 외부 데이터베이스로 절대 전송하지 않습니다.</p>
+                </div>
+                <p>사용자가 앱에 입력하는 모든 데이터는 사용자의 iPhone 기기 내부 보안 저장소(Local Storage / App Group)에만 안전하게 보관됩니다.</p>
+            </section>
+
+            <section>
+                <h2>2. 개인정보의 수집 및 이용 항목</h2>
+                <p>앱은 다음과 같이 어떠한 개인식별정보도 수집하지 않습니다:</p>
+                <ul>
+                    <li><strong>수집하지 않는 정보:</strong> 이름, 전화번호, 이메일 주소, 위치 정보, 연락처, 기기 고유 식별자(IDFA/광고 식별자), 결제 정보 등 일체.</li>
+                    <li><strong>로컬에서만 처리되는 데이터:</strong> 사용자가 직접 작성한 할 일(제목, 기한, 완료 여부, 생성일자, 완료일자), 다이어리 속지/폰트 설정, 부착된 스티커 목록 및 위치 좌표.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. 외부 서버 전송 및 제3자 제공</h2>
+                <p>앱은 일체의 외부 추적 라이브러리(Tracker), 행동 분석 툴(Analytics), 광고 식별 SDK(Ad SDK)를 포함하지 않습니다.</p>
+                <ul>
+                    <li>외부 광고 네트워크나 마케팅 업체로 사용자의 데이터를 판매, 공유, 위탁하지 않습니다.</li>
+                    <li>모든 렌더링, 폰트 적용, 드로잉 애니메이션은 기기 자체의 리소스로만 연산됩니다.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. 기기 간 백업 및 동기화 (Apple 인프라)</h2>
+                <p>사용자가 iOS 기기의 iCloud 백업을 켜둔 경우, 사용자의 선택에 따라 Apple의 보안 정책 및 개인 iCloud 계정을 통해 앱 데이터가 백업될 수 있습니다. 이 과정은 Apple의 암호화 시스템에 의해 보호되며, 개발자는 해당 데이터에 접근할 수 없습니다.</p>
+            </section>
+
+            <section>
+                <h2>5. 데이터의 보관 기간 및 파기</h2>
+                <p>모든 데이터는 사용자의 기기에 영구 보관되며, 언제든지 사용자가 직접 관리할 수 있습니다:</p>
+                <ul>
+                    <li>앱 내에서 개별 할 일을 삭제하거나 '완료 항목 비우기'를 수행하면 해당 데이터는 기기에서 즉시 영구 삭제됩니다.</li>
+                    <li>사용자가 기기에서 ‘뚜두’ 앱을 삭제(Uninstall)하면, 기기 내에 저장되었던 모든 데이터와 설정이 즉시 완전히 파기됩니다.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>6. 문의처</h2>
+                <p>개인정보 처리방침과 관련하여 문의사항이나 의견이 있으신 경우 아래 연락처로 언제든지 문의해 주시기 바랍니다.</p>
+                <ul>
+                    <li><strong>개발/운영:</strong> 뚜두 (DduDu) 개발팀</li>
+                    <li><strong>이메일:</strong> emperorvv@gmail.com</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- English Content -->
+        <div class="en-content">
+            <section>
+                <h2>1. Core Principles (100% On-Device)</h2>
+                <p>'DduDu' respects and values your privacy. The app <strong>does not require any account registration, login, or personal information.</strong></p>
+                <div class="highlight-box">
+                    <p>💡 DduDu never transmits your tasks, dates, stickers, or settings to any external server or database.</p>
+                </div>
+                <p>All data entered into the app is stored strictly on your local device (Local Storage / App Group) and stays under your complete control.</p>
+            </section>
+
+            <section>
+                <h2>2. Data Collection and Usage</h2>
+                <p>We do not collect any personally identifiable information:</p>
+                <ul>
+                    <li><strong>Data NOT collected:</strong> Names, phone numbers, email addresses, precise/approximate locations, contacts, Advertising Identifiers (IDFA), or payment info.</li>
+                    <li><strong>Data stored locally on device:</strong> Todo tasks (titles, due dates, completion dates, timestamps), font and paper theme preferences, and sticker positions.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. Third-Party Sharing and Analytics</h2>
+                <p>The app contains zero third-party trackers, analytics frameworks, or advertising SDKs.</p>
+                <ul>
+                    <li>No user data is sold, monetized, rented, or shared with advertisers or third parties.</li>
+                    <li>All drawing, font styling, and physics simulations run locally on your device hardware.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. Apple iCloud Backups</h2>
+                <p>If you enable standard iOS iCloud backups, your app data may be backed up according to Apple's secure infrastructure and privacy policies. The developer has zero access to your iCloud backup contents.</p>
+            </section>
+
+            <section>
+                <h2>5. Data Retention and Deletion</h2>
+                <p>You have full ownership of your data at all times:</p>
+                <ul>
+                    <li>Deleting a task inside the app immediately and permanently removes it from your device.</li>
+                    <li>Uninstalling the app from your device automatically purges all locally stored data, files, and preferences.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>6. Contact Us</h2>
+                <p>If you have any questions or feedback regarding this Privacy Policy, please feel free to reach out:</p>
+                <ul>
+                    <li><strong>Developer:</strong> DduDu Team</li>
+                    <li><strong>Email:</strong> emperorvv@gmail.com</li>
+                </ul>
+            </section>
+        </div>
+
+        <footer>
+            <p>© 2026 DduDu. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function setLang(lang) {
+            const body = document.body;
+            const btnKo = document.getElementById('btn-ko');
+            const btnEn = document.getElementById('btn-en');
+            if (lang === 'en') {
+                body.classList.add('show-en');
+                btnEn.classList.add('active');
+                btnKo.classList.remove('active');
+            } else {
+                body.classList.remove('show-en');
+                btnKo.classList.add('active');
+                btnEn.classList.remove('active');
+            }
+        }
+    </script>
+</body>
+</html>
